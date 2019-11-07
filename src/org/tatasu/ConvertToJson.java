@@ -13,6 +13,9 @@ import java.util.stream.Stream;
 
 import static java.nio.file.Paths.*;
 
+/**
+ * New Branch
+ */
 public class ConvertToJson {
 
     public void convertFilesInDirectory(String inDirectory, String fileOut) throws IOException {
