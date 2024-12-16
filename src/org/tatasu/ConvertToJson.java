@@ -17,7 +17,12 @@ import static java.nio.file.Paths.*;
  * New Branch 11
  */
 public class ConvertToJson {
-
+    /**
+     *
+     * @param inDirectory
+     * @param fileOut
+     * @throws IOException
+     */
     public void convertFilesInDirectory(String inDirectory, String fileOut) throws IOException {
         List<Path> files = this.readFiles(inDirectory);
         StringBuilder sb = this.parseFiles(files);
@@ -25,6 +30,12 @@ public class ConvertToJson {
 
     }
 
+    /**
+     * 
+     * @param inDirectory
+     * @return
+     * @throws IOException
+     */
     public List<Path> readFiles(String inDirectory) throws IOException {
         List<Path> pathsList = new ArrayList<Path>();
         try (Stream<Path> paths = Files.walk(get(inDirectory))) {
